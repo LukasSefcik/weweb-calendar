@@ -1,0 +1,13 @@
+{
+  "name": "kros-scheduler",
+  "version": "0.0.1",
+  "scripts": {
+    "build": "weweb build",
+    "serve": "weweb serve"
+  },
+  "devDependencies": {
+    "@weweb/cli": "latest",
+    "devextreme": "23.2.4",
+    "devextreme-vue": "23.2.4"
+  }
+}
