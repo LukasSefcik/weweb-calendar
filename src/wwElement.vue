@@ -1,6 +1,6 @@
 <template>
   <DxScheduler :data-source="content.dataSource" :current-date="currentDate" :views="views" :start-day-hour="9"
-    :current-view="content.currentView" @appointment-click="console.log(event)" />
+    :current-view="content.currentView" @appointment-click="eventClick" />
 </template>
 
 <script>
