@@ -4,6 +4,26 @@ export default {
       en: "Kros Scheduler",
     },
   },
+  triggerEvents: [
+    {
+      name: "onAppointmentClick",
+      label: { en: "On appoinment event click" },
+      event: {
+        rawEventData: {},
+        event: {
+          targetedAppointmentData: {
+            startDate: "",
+            endDate: "",
+            title: "",
+            content: "",
+            allDay: null,
+          },
+        },
+        domEvent: {},
+      },
+      default: true,
+    },
+  ],
   properties: {
     dataSource: {
       label: {
