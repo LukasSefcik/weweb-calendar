@@ -1,8 +1,12 @@
 <template>
-<!--  <DxScheduler -->
-<!--  :data-source="content.dataSource" :current-date="currentDate" :views="views" :start-day-hour="9"-->
-<!--    :current-view="content.currentView" @appointment-click="eventClick" />-->
-  <p>Working!</p>
+  <DxScheduler
+      :data-source="content.dataSource"
+      :current-date="currentDate"
+      :views="views"
+      :start-day-hour="9"
+      :current-view="content.currentView"
+      @appointment-click="eventClick"
+  />
 </template>
 
 <script>
@@ -15,7 +19,7 @@ export default {
     DxScheduler
   },
   props: {
-    content: { type: Object, required: true },
+    content: {type: Object, required: true},
   },
   emits: ['trigger-event'],
   methods: {
