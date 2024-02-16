@@ -10,7 +10,7 @@
 </template>
 
 <script>
-// import './dx.fluent.dx-light-theme.css';
+import './dx.fluent.dx-light-theme.css';
 
 import DxScheduler from 'devextreme-vue/scheduler';
 
