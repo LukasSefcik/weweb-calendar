@@ -8,11 +8,11 @@
 <script>
 // import './dx.fluent.dx-light-theme.css';
 
-// import DxScheduler from 'devextreme-vue/scheduler';
+import DxScheduler from 'devextreme-vue/scheduler';
 
 export default {
   components: {
-    // DxScheduler
+    DxScheduler
   },
   props: {
     content: { type: Object, required: true },
