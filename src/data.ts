@@ -1,4 +1,4 @@
-export const data = [
+export default [
   {
     text: "Website Re-Design Plan",
     startDate: new Date("2021-03-29T16:30:00.000Z"),

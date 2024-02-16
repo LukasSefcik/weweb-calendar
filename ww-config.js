@@ -5,19 +5,30 @@ export default {
     },
   },
   properties: {
-    textColor: {
+    dataSource: {
       label: {
-        en: "Text color",
+        en: "DataSource",
       },
-      type: "Color",
-      defaultValue: "#F23636",
+      type: "Info",
+      options: {
+        text: { en: "Bind your data to the scheduler" },
+      },
+      defaultValue: [],
+      bindable: true,
     },
-    font: {
-      size: 14,
+    currentView: {
       label: {
-        en: "Font size custom",
+        en: "Current View",
       },
-      type: "Number",
+      type: "TextSelect",
+      options: {
+        options: [
+          { label: "Day", value: "day" },
+          { label: "Week", value: "week" },
+          { label: "Month", value: "month" },
+        ],
+      },
+      defaultValue: "week",
     },
   },
 };
