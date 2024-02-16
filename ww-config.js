@@ -12,6 +12,7 @@ export default {
         startDate: "",
         endDate: "",
         text: "",
+        description: "",
         allDay: null,
       },
       default: true,
