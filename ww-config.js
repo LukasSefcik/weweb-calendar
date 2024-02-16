@@ -9,17 +9,14 @@ export default {
       name: "onAppointmentClick",
       label: { en: "On appoinment event click" },
       event: {
-        rawEventData: {},
         event: {
           targetedAppointmentData: {
             startDate: "",
             endDate: "",
             title: "",
-            content: "",
             allDay: null,
           },
         },
-        domEvent: {},
       },
       default: true,
     },
