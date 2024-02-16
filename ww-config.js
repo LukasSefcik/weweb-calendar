@@ -4,10 +4,11 @@ export default {
       en: "Kros Scheduler",
     },
   },
+
   triggerEvents: [
     {
       name: "onAppointmentClick",
-      label: { en: "On appoinment event click" },
+      label: { en: "On appointment event click" },
       event: {
         startDate: "",
         endDate: "",
@@ -15,9 +16,9 @@ export default {
         description: "",
         allDay: null,
       },
-      default: true,
     },
   ],
+
   properties: {
     dataSource: {
       label: {

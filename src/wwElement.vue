@@ -1,13 +1,13 @@
 <template>
-  <DxScheduler :data-source="content.dataSource" :current-date="currentDate" :views="views" :start-day-hour="9"
+  <DxScheduler 
+  :data-source="content.dataSource" :current-date="currentDate" :views="views" :start-day-hour="9"
     :current-view="content.currentView" @appointment-click="eventClick" />
 </template>
 
 <script>
-import './dx.fluent.dx-light-theme.css';
+// import './dx.fluent.dx-light-theme.css';
 
 import DxScheduler from 'devextreme-vue/scheduler';
-import data from './data.ts';
 
 export default {
   components: {
@@ -28,7 +28,6 @@ export default {
   data() {
     return {
       currentDate: new Date(2021, 2, 29),
-      dataSource: data,
       views: ['day', 'week', 'month']
     }
   },
