@@ -1,17 +1,18 @@
 <template>
-  <DxScheduler 
-  :data-source="content.dataSource" :current-date="currentDate" :views="views" :start-day-hour="9"
-    :current-view="content.currentView" @appointment-click="eventClick" />
+<!--  <DxScheduler -->
+<!--  :data-source="content.dataSource" :current-date="currentDate" :views="views" :start-day-hour="9"-->
+<!--    :current-view="content.currentView" @appointment-click="eventClick" />-->
+  <p>Working!</p>
 </template>
 
 <script>
 // import './dx.fluent.dx-light-theme.css';
 
-import DxScheduler from 'devextreme-vue/scheduler';
+// import DxScheduler from 'devextreme-vue/scheduler';
 
 export default {
   components: {
-    DxScheduler
+    // DxScheduler
   },
   props: {
     content: { type: Object, required: true },
