@@ -8,7 +8,7 @@ export default {
   triggerEvents: [
     {
       name: "onAppointmentClick",
-      label: { en: "On appointment event click" },
+      label: {en: "On appointment event click"},
       event: {
         startDate: "",
         endDate: "",
@@ -26,10 +26,11 @@ export default {
       },
       type: "Info",
       options: {
-        text: { en: "Bind your data to the scheduler" },
+        text: {en: "Bind your data to the scheduler"},
       },
       defaultValue: [],
       bindable: true,
+      section: "settings",
     },
     currentView: {
       label: {
@@ -38,12 +39,21 @@ export default {
       type: "TextSelect",
       options: {
         options: [
-          { label: "Day", value: "day" },
-          { label: "Week", value: "week" },
-          { label: "Month", value: "month" },
+          {label: "Day", value: "day"},
+          {label: "Week", value: "week"},
+          {label: "Month", value: "month"},
         ],
       },
       defaultValue: "week",
+      section: "settings",
     },
-  },
+    draggingGroupName: {
+      label: {
+        en: "Dragging Group Name",
+      },
+      type: "Text",
+      defaultValue: "",
+      section: "settings",
+    },
+  }
 };

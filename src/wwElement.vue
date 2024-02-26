@@ -6,17 +6,24 @@
       :start-day-hour="9"
       :current-view="content.currentView"
       @appointment-click="eventClick"
-  />
+  >
+    <DxAppointmentDragging
+        :group="content.draggingGroupName"
+        :on-remove="onAppointmentRemove"
+        :on-add="onAppointmentAdd"
+    />
+  </DxScheduler>
 </template>
 
 <script>
 import './dx.fluent.dx-light-theme.css';
 
-import DxScheduler from 'devextreme-vue/scheduler';
+import DxScheduler, { DxAppointmentDragging } from 'devextreme-vue/scheduler';
 
 export default {
   components: {
-    DxScheduler
+    DxScheduler,
+    DxAppointmentDragging
   },
   props: {
     content: {type: Object, required: true},
@@ -24,6 +31,7 @@ export default {
   emits: ['trigger-event'],
   methods: {
     eventClick(event) {
+      console.log('eventClick', event);
       this.$emit('trigger-event', {
         name: 'onAppointmentClick',
         event: event.targetedAppointmentData
