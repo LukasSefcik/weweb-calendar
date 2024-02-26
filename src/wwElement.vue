@@ -36,6 +36,12 @@ export default {
         name: 'onAppointmentClick',
         event: event.targetedAppointmentData
       })
+    },
+    onAppointmentRemove(event) {
+      console.log('onAppointmentRemove', event);
+    },
+    onAppointmentAdd(event) {
+      console.log('onAppointmentAdd', event);
     }
   },
   data() {
