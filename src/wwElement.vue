@@ -1,16 +1,14 @@
 <template>
-  <DxScheduler
-      :data-source="content.dataSource"
-      :current-date="currentDate"
-      :views="views"
-      :start-day-hour="9"
-      :current-view="content.currentView"
-      @appointment-click="eventClick"
-  >
-    <DxAppointmentDragging
-        :group="content.draggingGroupName"
-        :on-remove="onAppointmentRemove"
-        :on-add="onAppointmentAdd"
+  <DxScheduler :data-source="content.dataSource"
+               :current-date="currentDate"
+               :views="views"
+               :start-day-hour="9"
+               :current-view="content.currentView"
+               :editing="true"
+               @appointment-click="eventClick">
+    <DxAppointmentDragging :group="content.draggingGroupName"
+                           :on-add="onAppointmentAdd"
+                           :on-remove="onAppointmentRemove"
     />
   </DxScheduler>
 </template>
@@ -18,7 +16,7 @@
 <script>
 import './dx.fluent.dx-light-theme.css';
 
-import DxScheduler, { DxAppointmentDragging } from 'devextreme-vue/scheduler';
+import DxScheduler, {DxAppointmentDragging} from 'devextreme-vue/scheduler';
 
 export default {
   components: {
