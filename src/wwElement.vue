@@ -6,7 +6,7 @@
                :current-view="content.currentView"
                :editing="true"
                @appointment-click="eventClick">
-    <DxAppointmentDragging :group="content.draggingGroupName"
+    <DxAppointmentDragging :group="'xxx'"
                            :on-add="onAppointmentAdd"
                            :on-remove="onAppointmentRemove"
     />
