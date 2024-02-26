@@ -8,8 +8,11 @@
                @appointment-click="eventClick">
     <DxAppointmentDragging :group="'xxx'"
                            :on-add="onAppointmentAdd"
+                           @on-add="onAppointmentAdd"
+                           @add="onAppointmentAdd"
                            :on-remove="onAppointmentRemove"
                            @on-drag-start="onDragStart"
+                           @drag-start="onDragStart"
     />
   </DxScheduler>
 </template>
@@ -17,7 +20,7 @@
 <script>
 import './dx.fluent.dx-light-theme.css';
 
-import DxScheduler, {DxAppointmentDragging} from 'devextreme-vue/scheduler';
+import { DxScheduler, DxAppointmentDragging } from 'devextreme-vue/scheduler';
 
 export default {
   components: {
