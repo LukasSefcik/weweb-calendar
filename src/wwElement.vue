@@ -9,6 +9,7 @@
     <DxAppointmentDragging :group="'xxx'"
                            :on-add="onAppointmentAdd"
                            :on-remove="onAppointmentRemove"
+                           @on-drag-start="onDragStart"
     />
   </DxScheduler>
 </template>
@@ -40,6 +41,9 @@ export default {
     },
     onAppointmentAdd(event) {
       console.log('onAppointmentAdd', event);
+    },
+    onDragStart(event) {
+      console.log('onDragStart', event);
     }
   },
   data() {
