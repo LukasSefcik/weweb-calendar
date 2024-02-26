@@ -13,6 +13,8 @@
                            :on-remove="onAppointmentRemove"
                            @on-drag-start="onDragStart"
                            @drag-start="onDragStart"
+                           :drag-start="onDragStart"
+                           :on-drag-start="onDragStart"
     />
   </DxScheduler>
 </template>
