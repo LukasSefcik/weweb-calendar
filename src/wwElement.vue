@@ -9,7 +9,7 @@
     <DxAppointmentDragging :group="content.draggingGroupName"
                            :on-add="onAppointmentAdd"
                            :on-remove="onAppointmentRemove"
-                           :drag-start="onDragStart"
+                           :on-drag-start="onDragStart"
     />
   </DxScheduler>
 </template>
@@ -53,7 +53,7 @@ export default {
       console.log('onDragStart', event);
       this.$emit('trigger-event', {
         name: 'onDragStart',
-        event: event.itemData.Target
+        event: event.itemData
       })
     }
   },
