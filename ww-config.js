@@ -28,28 +28,28 @@ export default {
         allDay: null,
       },
     },
-    {
-      name: "onAppointmentRemove",
-      label: {en: "On appointment remove"},
-      event: {
-        startDate: "",
-        endDate: "",
-        text: "",
-        description: "",
-        allDay: null,
-      },
-    },
-    {
-      name: "onDragStart",
-      label: {en: "On drag start"},
-      event: {
-        startDate: "",
-        endDate: "",
-        text: "",
-        description: "",
-        allDay: null,
-      },
-    }
+    // {
+    //   name: "onAppointmentRemove",
+    //   label: {en: "On appointment remove"},
+    //   event: {
+    //     startDate: "",
+    //     endDate: "",
+    //     text: "",
+    //     description: "",
+    //     allDay: null,
+    //   },
+    // },
+    // {
+    //   name: "onDragStart",
+    //   label: {en: "On drag start"},
+    //   event: {
+    //     startDate: "",
+    //     endDate: "",
+    //     text: "",
+    //     description: "",
+    //     allDay: null,
+    //   },
+    // }
   ],
 
   properties: {
