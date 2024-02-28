@@ -6,15 +6,10 @@
                :current-view="content.currentView"
                :editing="true"
                @appointment-click="eventClick">
-    <DxAppointmentDragging :group="'xxx'"
+    <DxAppointmentDragging :group="content.draggingGroupName"
                            :on-add="onAppointmentAdd"
-                           @on-add="onAppointmentAdd"
-                           @add="onAppointmentAdd"
                            :on-remove="onAppointmentRemove"
-                           @on-drag-start="onDragStart"
-                           @drag-start="onDragStart"
                            :drag-start="onDragStart"
-                           :on-drag-start="onDragStart"
     />
   </DxScheduler>
 </template>
@@ -35,7 +30,6 @@ export default {
   emits: ['trigger-event'],
   methods: {
     eventClick(event) {
-      console.log('eventClick', event);
       this.$emit('trigger-event', {
         name: 'onAppointmentClick',
         event: event.targetedAppointmentData
@@ -43,12 +37,24 @@ export default {
     },
     onAppointmentRemove(event) {
       console.log('onAppointmentRemove', event);
+      this.$emit('trigger-event', {
+        name: 'onAppointmentRemove',
+        event: event.toItemData
+      })
     },
     onAppointmentAdd(event) {
       console.log('onAppointmentAdd', event);
+      this.$emit('trigger-event', {
+        name: 'onAppointmentAdd',
+        event: event.itemData
+      })
     },
     onDragStart(event) {
       console.log('onDragStart', event);
+      this.$emit('trigger-event', {
+        name: 'onDragStart',
+        event: event.itemData.Target
+      })
     }
   },
   data() {
