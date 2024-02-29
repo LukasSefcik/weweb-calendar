@@ -17,39 +17,61 @@ export default {
         allDay: null,
       },
     },
-    // {
-    //   name: "onAppointmentAdd",
-    //   label: {en: "On appointment add"},
-    //   event: {
-    //     startDate: "",
-    //     endDate: "",
-    //     text: "",
-    //     description: "",
-    //     allDay: null,
-    //   },
-    // },
-    // {
-    //   name: "onAppointmentRemove",
-    //   label: {en: "On appointment remove"},
-    //   event: {
-    //     startDate: "",
-    //     endDate: "",
-    //     text: "",
-    //     description: "",
-    //     allDay: null,
-    //   },
-    // },
-    // {
-    //   name: "onDragStart",
-    //   label: {en: "On drag start"},
-    //   event: {
-    //     startDate: "",
-    //     endDate: "",
-    //     text: "",
-    //     description: "",
-    //     allDay: null,
-    //   },
-    // }
+    {
+      name: "onAppointmentUpdated",
+      label: {en: "On appointment update"},
+      event: {
+        startDate: "",
+        endDate: "",
+        text: "",
+        description: "",
+        allDay: null,
+      },
+    },
+    {
+      name: "onAppointmentDeleted",
+      label: {en: "On appointment deleted"},
+      event: {
+        startDate: "",
+        endDate: "",
+        text: "",
+        description: "",
+        allDay: null,
+      },
+    },
+    {
+      name: "onAppointmentAdd",
+      label: {en: "On appointment add"},
+      event: {
+        startDate: "",
+        endDate: "",
+        text: "",
+        description: "",
+        allDay: null,
+      },
+    },
+    {
+      name: "onAppointmentRemove",
+      label: {en: "On appointment remove"},
+      event: {
+        startDate: "",
+        endDate: "",
+        text: "",
+        description: "",
+        allDay: null,
+      },
+    },
+    {
+      name: "onDragStart",
+      label: {en: "On drag start"},
+      event: {
+        startDate: "",
+        endDate: "",
+        text: "",
+        description: "",
+        allDay: null,
+      },
+    }
   ],
 
   properties: {
@@ -86,6 +108,30 @@ export default {
       },
       type: "Text",
       defaultValue: "",
+      section: "settings",
+    },
+    textExpr: {
+      label: {
+        en: "Specifies the name of the data source item field that holds the subject of an appointment.",
+      },
+      type: "Text",
+      defaultValue: "text",
+      section: "settings",
+    },
+    startDateExpr: {
+      label: {
+        en: "Specifies the name of the data source item field that defines the start of an appointment.",
+      },
+      type: "Text",
+      defaultValue: "startDate",
+      section: "settings",
+    },
+    endDateExpr: {
+      label: {
+        en: "Specifies the name of the data source item field that defines the end of an appointment.",
+      },
+      type: "Text",
+      defaultValue: "endDate",
       section: "settings",
     },
   }
