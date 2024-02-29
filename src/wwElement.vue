@@ -5,7 +5,10 @@
                :start-day-hour="9"
                :current-view="content.currentView"
                :editing="true"
-               @appointment-click="eventClick">
+               @appointment-click="onAppointmentClick"
+               @appointment-updated="onAppointmentUpdated"
+               @appointment-deleted="onAppointmentDeleted"
+  >
     <DxAppointmentDragging :group="content.draggingGroupName"
                            :on-add="onAppointmentAdd"
                            :on-remove="onAppointmentRemove"
@@ -29,10 +32,24 @@ export default {
   },
   emits: ['trigger-event'],
   methods: {
-    eventClick(event) {
+    onAppointmentClick(event) {
       this.$emit('trigger-event', {
         name: 'onAppointmentClick',
         event: event.targetedAppointmentData
+      })
+    },
+    onAppointmentUpdated(event) {
+      console.log('onAppointmentUpdated', event);
+      this.$emit('trigger-event', {
+        name: 'onAppointmentUpdated',
+        event: event.appointmentData
+      })
+    },
+    onAppointmentDeleted(event) {
+      console.log('onAppointmentDeleted', event);
+      this.$emit('trigger-event', {
+        name: 'onAppointmentDeleted',
+        event: event.appointmentData
       })
     },
     onAppointmentRemove(event) {
