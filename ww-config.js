@@ -17,17 +17,17 @@ export default {
         allDay: null,
       },
     },
-    {
-      name: "onAppointmentAdd",
-      label: {en: "On appointment add"},
-      event: {
-        startDate: "",
-        endDate: "",
-        text: "",
-        description: "",
-        allDay: null,
-      },
-    },
+    // {
+    //   name: "onAppointmentAdd",
+    //   label: {en: "On appointment add"},
+    //   event: {
+    //     startDate: "",
+    //     endDate: "",
+    //     text: "",
+    //     description: "",
+    //     allDay: null,
+    //   },
+    // },
     // {
     //   name: "onAppointmentRemove",
     //   label: {en: "On appointment remove"},
