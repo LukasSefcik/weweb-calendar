@@ -112,7 +112,7 @@ export default {
     },
     textExpr: {
       label: {
-        en: "Specifies the name of the data source item field that holds the subject of an appointment.",
+        en: "Text field name",
       },
       type: "Text",
       defaultValue: "text",
@@ -120,7 +120,7 @@ export default {
     },
     startDateExpr: {
       label: {
-        en: "Specifies the name of the data source item field that defines the start of an appointment.",
+        en: "Start date field name",
       },
       type: "Text",
       defaultValue: "startDate",
@@ -128,7 +128,7 @@ export default {
     },
     endDateExpr: {
       label: {
-        en: "Specifies the name of the data source item field that defines the end of an appointment.",
+        en: "End data field name",
       },
       type: "Text",
       defaultValue: "endDate",

@@ -5,13 +5,13 @@
                :start-day-hour="9"
                :current-view="content.currentView"
                :editing="true"
-               :text-expr="content.textExpr"
-               :start-date-expr="content.startDateExpr"
-               :end-date-expr="content.endDateExpr"
                @appointment-click="onAppointmentClick"
                @appointment-updated="onAppointmentUpdated"
                @appointment-deleted="onAppointmentDeleted"
   >
+<!--               :text-expr="content.textExpr"-->
+<!--               :start-date-expr="content.startDateExpr"-->
+<!--               :end-date-expr="content.endDateExpr"-->
     <DxAppointmentDragging :group="content.draggingGroupName"
                            :on-add="onAppointmentAdd"
                            :on-remove="onAppointmentRemove"
