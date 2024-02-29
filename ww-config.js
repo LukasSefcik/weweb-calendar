@@ -8,7 +8,7 @@ export default {
   triggerEvents: [
     {
       name: "onAppointmentClick",
-      label: {en: "On appointment event click"},
+      label: { en: "On appointment event click" },
       event: {
         startDate: "",
         endDate: "",
@@ -19,7 +19,7 @@ export default {
     },
     {
       name: "onAppointmentUpdated",
-      label: {en: "On appointment update"},
+      label: { en: "On appointment update" },
       event: {
         startDate: "",
         endDate: "",
@@ -30,7 +30,7 @@ export default {
     },
     {
       name: "onAppointmentDeleted",
-      label: {en: "On appointment deleted"},
+      label: { en: "On appointment deleted" },
       event: {
         startDate: "",
         endDate: "",
@@ -41,7 +41,7 @@ export default {
     },
     {
       name: "onAppointmentAdd",
-      label: {en: "On appointment add"},
+      label: { en: "On appointment add" },
       event: {
         startDate: "",
         endDate: "",
@@ -52,7 +52,7 @@ export default {
     },
     {
       name: "onAppointmentRemove",
-      label: {en: "On appointment remove"},
+      label: { en: "On appointment remove" },
       event: {
         startDate: "",
         endDate: "",
@@ -63,7 +63,7 @@ export default {
     },
     {
       name: "onDragStart",
-      label: {en: "On drag start"},
+      label: { en: "On drag start" },
       event: {
         startDate: "",
         endDate: "",
@@ -71,7 +71,7 @@ export default {
         description: "",
         allDay: null,
       },
-    }
+    },
   ],
 
   properties: {
@@ -81,7 +81,7 @@ export default {
       },
       type: "Info",
       options: {
-        text: {en: "Bind your data to the scheduler"},
+        text: { en: "Bind your data to the scheduler" },
       },
       defaultValue: [],
       bindable: true,
@@ -94,9 +94,9 @@ export default {
       type: "TextSelect",
       options: {
         options: [
-          {label: "Day", value: "day"},
-          {label: "Week", value: "week"},
-          {label: "Month", value: "month"},
+          { label: "Day", value: "day" },
+          { label: "Week", value: "week" },
+          { label: "Month", value: "month" },
         ],
       },
       defaultValue: "week",
@@ -128,11 +128,11 @@ export default {
     },
     endDateExpr: {
       label: {
-        en: "End data field name",
+        en: "End date field name",
       },
       type: "Text",
       defaultValue: "endDate",
       section: "settings",
     },
-  }
+  },
 };
