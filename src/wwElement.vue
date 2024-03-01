@@ -67,28 +67,10 @@ export default {
       });
     },
     onAppointmentAdd(event) {
-      const test = {
-        startDate: event.itemData.CustomColumns.find(
-          (column) => column.Name === "U_DOCU_PLANG_dateFrom",
-        ).Value,
-        endDate: event.itemData.CustomColumns.find(
-          (column) => column.Name === "U_DOCU_PLANG_dateTo",
-        ).Value,
-        itemData: event.itemData,
-      };
       console.log("onAppointmentAdd", event);
-      console.log("onAppointmentAdd - custom event", test);
       this.$emit("trigger-event", {
         name: "onAppointmentAdd",
-        event: {
-          startDate: event.itemData.CustomColumns.find(
-            (column) => column.Name === "U_DOCU_PLANG_dateFrom",
-          ).Value,
-          endDate: event.itemData.CustomColumns.find(
-            (column) => column.Name === "U_DOCU_PLANG_dateTo",
-          ).Value,
-          itemData: event.itemData,
-        },
+        event: event.itemData,
       });
     },
     onDragStart(event) {

@@ -9,66 +9,32 @@ export default {
     {
       name: "onAppointmentClick",
       label: { en: "On appointment event click" },
-      event: {
-        startDate: "",
-        endDate: "",
-        text: "",
-        description: "",
-        allDay: null,
-      },
+      event: {},
     },
     {
       name: "onAppointmentUpdated",
       label: { en: "On appointment update" },
-      event: {
-        startDate: "",
-        endDate: "",
-        text: "",
-        description: "",
-        allDay: null,
-      },
+      event: {},
     },
     {
       name: "onAppointmentDeleted",
       label: { en: "On appointment deleted" },
-      event: {
-        startDate: "",
-        endDate: "",
-        text: "",
-        description: "",
-        allDay: null,
-      },
+      event: {},
     },
     {
       name: "onAppointmentAdd",
       label: { en: "On appointment add" },
-      event: {
-        startDate: "",
-        endDate: "",
-        itemData: {},
-      },
+      event: {},
     },
     {
       name: "onAppointmentRemove",
       label: { en: "On appointment remove" },
-      event: {
-        startDate: "",
-        endDate: "",
-        text: "",
-        description: "",
-        allDay: null,
-      },
+      event: {},
     },
     {
       name: "onDragStart",
       label: { en: "On drag start" },
-      event: {
-        startDate: "",
-        endDate: "",
-        text: "",
-        description: "",
-        allDay: null,
-      },
+      event: {},
     },
   ],
 
