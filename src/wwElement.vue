@@ -67,10 +67,28 @@ export default {
       });
     },
     onAppointmentAdd(event) {
+      const test = {
+        startDate: event.itemData.CustomColumns.find(
+          (column) => column.Name === "U_DOCU_PLANG_dateFrom",
+        ).Value,
+        endDate: event.itemData.CustomColumns.find(
+          (column) => column.Name === "U_DOCU_PLANG_dateTo",
+        ).Value,
+        itemData: event.itemData,
+      };
       console.log("onAppointmentAdd", event);
+      console.log("onAppointmentAdd - custom event", test);
       this.$emit("trigger-event", {
         name: "onAppointmentAdd",
-        event: event.itemData,
+        event: {
+          startDate: event.itemData.CustomColumns.find(
+            (column) => column.Name === "U_DOCU_PLANG_dateFrom",
+          ).Value,
+          endDate: event.itemData.CustomColumns.find(
+            (column) => column.Name === "U_DOCU_PLANG_dateTo",
+          ).Value,
+          itemData: event.itemData,
+        },
       });
     },
     onDragStart(event) {
@@ -90,3 +108,10 @@ export default {
 </script>
 
 <style lang="scss" scoped></style>
+
+let inputData = data; const flatData = []; inputData.data.forEach((item) => {
+const customColumns = item.CustomColumns || []; const newObj = {};
+customColumns.forEach((column) => { if ( column.Name === "U_DOCU_PLANG_source"
+|| column.Name === "U_DOCU_PLANG_dateFrom" || column.Name ===
+"U_DOCU_PLANG_dateTo" ) { newObj[column.Name] = column.Value; } });
+flatData.push(newObj); }); return flatData;

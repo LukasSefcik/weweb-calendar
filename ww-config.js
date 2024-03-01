@@ -45,9 +45,7 @@ export default {
       event: {
         startDate: "",
         endDate: "",
-        text: "",
-        description: "",
-        allDay: null,
+        itemData: {},
       },
     },
     {
@@ -94,7 +92,9 @@ export default {
       type: "TextSelect",
       options: {
         options: [
+          { label: "Agenda", value: "agenda" },
           { label: "Day", value: "day" },
+          { label: "Work week", value: "workWeek" },
           { label: "Week", value: "week" },
           { label: "Month", value: "month" },
         ],
