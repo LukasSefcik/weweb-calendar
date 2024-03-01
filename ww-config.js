@@ -118,6 +118,14 @@ export default {
       defaultValue: "text",
       section: "settings",
     },
+    descriptionExpr: {
+      label: {
+        en: "Description field name",
+      },
+      type: "Text",
+      defaultValue: "description",
+      section: "settings",
+    },
     startDateExpr: {
       label: {
         en: "Start date field name",

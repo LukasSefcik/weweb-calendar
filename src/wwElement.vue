@@ -1,11 +1,14 @@
 <template>
   <DxScheduler
+    all-day-panel-mode="hidden"
+    first-day-of-week="1"
     :data-source="content.dataSource"
     :views="views"
     :start-day-hour="9"
     :current-view="content.currentView"
     :editing="true"
     :text-expr="content.textExpr"
+    :description-expr="content.descriptionExpr"
     :start-date-expr="content.startDateExpr"
     :end-date-expr="content.endDateExpr"
     @appointment-click="onAppointmentClick"
@@ -80,7 +83,7 @@ export default {
   },
   data() {
     return {
-      views: ["day", "week", "month"],
+      views: ["agenda", "day", "workWeek", "week", "month"],
     };
   },
 };
