@@ -89,11 +89,8 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped></style>
-
-let inputData = data; const flatData = []; inputData.data.forEach((item) => {
-const customColumns = item.CustomColumns || []; const newObj = {};
-customColumns.forEach((column) => { if ( column.Name === "U_DOCU_PLANG_source"
-|| column.Name === "U_DOCU_PLANG_dateFrom" || column.Name ===
-"U_DOCU_PLANG_dateTo" ) { newObj[column.Name] = column.Value; } });
-flatData.push(newObj); }); return flatData;
+<style lang="scss" scoped>
+.dx-scheduler-header-panel-container {
+  overflow-x: scroll;
+}
+</style>
