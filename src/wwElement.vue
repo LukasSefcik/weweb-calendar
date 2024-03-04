@@ -4,7 +4,6 @@
     first-day-of-week="1"
     :data-source="content.dataSource"
     :views="views"
-    :start-day-hour="9"
     :current-view="content.currentView"
     :editing="true"
     :text-expr="content.textExpr"
@@ -91,6 +90,6 @@ export default {
 
 <style lang="scss" scoped>
 .dx-scheduler-header-panel-container {
-  overflow-x: scroll !important;
+  overflow-y: scroll !important;
 }
 </style>
