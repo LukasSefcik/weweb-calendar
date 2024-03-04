@@ -91,6 +91,6 @@ export default {
 
 <style lang="scss" scoped>
 .dx-scheduler-header-panel-container {
-  overflow-x: scroll;
+  overflow-x: scroll !important;
 }
 </style>
