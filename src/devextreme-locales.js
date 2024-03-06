@@ -5,7 +5,7 @@
  * Not every text is translated, only those that are used in our application. Translate as needed.
  * Currently translated: common, vizExport, dxDataGrid
  */
-export const devextremeSkLocales: any = {
+export const devextremeSkLocales = {
   sk: {
     Yes: "Áno",
     No: "Nie",
