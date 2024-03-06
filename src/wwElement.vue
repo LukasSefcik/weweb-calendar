@@ -39,6 +39,7 @@ export default {
   emits: ["trigger-event"],
   methods: {
     onAppointmentClick(event) {
+      event.cancel = true;
       this.$emit("trigger-event", {
         name: "onAppointmentClick",
         event: event.targetedAppointmentData,
