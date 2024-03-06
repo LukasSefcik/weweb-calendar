@@ -88,7 +88,7 @@ export default {
       });
     },
     onContentReady(e) {
-      e.component.scrollToTime(0, 0, this.currentDate);
+      e.component.scrollTo(this.currentDate);
     },
   },
   data() {
