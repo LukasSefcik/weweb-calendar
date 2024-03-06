@@ -94,7 +94,7 @@ export default {
   data() {
     return {
       views: ["agenda", "day", "workWeek", "week", "month"],
-      currentDate: now(),
+      currentDate: new Date(),
     };
   },
 };
