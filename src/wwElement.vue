@@ -10,6 +10,7 @@
     :description-expr="content.descriptionExpr"
     :start-date-expr="content.startDateExpr"
     :end-date-expr="content.endDateExpr"
+    :on-content-ready="onContentReady"
     @appointment-click="onAppointmentClick"
     @appointment-updated="onAppointmentUpdated"
     @appointment-deleted="onAppointmentDeleted"
@@ -86,10 +87,14 @@ export default {
         event: event.itemData,
       });
     },
+    onContentReady(e) {
+      e.component.scrollToTime(0, 0, this.currentDate);
+    },
   },
   data() {
     return {
       views: ["agenda", "day", "workWeek", "week", "month"],
+      currentDate: now(),
     };
   },
 };
