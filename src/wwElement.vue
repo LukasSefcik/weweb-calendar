@@ -25,6 +25,7 @@
 
 <script>
 import "./dx.fluent.dx-light-theme.css";
+import { devextremeSkLocales } from "./devextreme-locales";
 
 import { DxScheduler, DxAppointmentDragging } from "devextreme-vue/scheduler";
 
@@ -32,6 +33,10 @@ export default {
   components: {
     DxScheduler,
     DxAppointmentDragging,
+  },
+  created() {
+    loadMessages(devextremeSkLocales);
+    locale("sk-SK");
   },
   props: {
     content: { type: Object, required: true },
