@@ -28,6 +28,7 @@ import "./dx.fluent.dx-light-theme.css";
 import { devextremeSkLocales } from "./devextreme-locales.js";
 
 import { DxScheduler, DxAppointmentDragging } from "devextreme-vue/scheduler";
+import { locale, loadMessages } from "devextreme/localization";
 
 export default {
   components: {
