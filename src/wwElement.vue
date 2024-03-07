@@ -95,6 +95,7 @@ export default {
     },
     scrollToToday() {
       const el = this.$refs.scheduler;
+      console.log(el);
       if (el) el.scrollTo(this.currentDate);
     },
   },
