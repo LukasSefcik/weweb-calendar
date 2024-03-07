@@ -5,6 +5,8 @@ export default {
     },
   },
 
+  actions: [{ label: "Scroll to today", action: "scrollToToday" }],
+
   triggerEvents: [
     {
       name: "onAppointmentClick",

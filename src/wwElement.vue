@@ -1,5 +1,6 @@
 <template>
   <DxScheduler
+    ref="scheduler"
     all-day-panel-mode="hidden"
     first-day-of-week="1"
     :data-source="content.dataSource"
@@ -25,6 +26,8 @@
 </template>
 
 <script>
+import { ref } from "vue";
+
 import "./dx.fluent.dx-light-theme.css";
 import { devextremeSkLocales } from "./devextreme-locales.js";
 
@@ -89,6 +92,10 @@ export default {
     },
     onContentReady(e) {
       e.component.scrollTo(this.currentDate);
+    },
+    scrollToToday() {
+      const el = this.$refs.scheduler;
+      if (el) el.scrollTo(this.currentDate);
     },
   },
   data() {
