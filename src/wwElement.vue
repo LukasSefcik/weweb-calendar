@@ -6,7 +6,7 @@
     :data-source="content.dataSource"
     :views="views"
     :current-view="content.currentView"
-    :current-date="content.currentDate"
+    :current-date="currentDate"
     :editing="true"
     :text-expr="content.textExpr"
     :description-expr="content.descriptionExpr"
@@ -41,6 +41,10 @@ export default {
   created() {
     loadMessages(devextremeSkLocales);
     locale("sk-SK");
+  },
+  setup(props) {
+    currentDate = props.content.currentDate ?? new Date();
+    return currentDate;
   },
   props: {
     content: { type: Object, required: true },
