@@ -74,8 +74,8 @@ export default {
       label: {
         en: "Current Date",
       },
-      type: "Date",
-      defaultValue: new Date(),
+      type: "Text",
+      defaultValue: null,
       section: "settings",
     },
     draggingGroupName: {
