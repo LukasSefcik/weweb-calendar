@@ -6,6 +6,7 @@
     :data-source="content.dataSource"
     :views="views"
     :current-view="content.currentView"
+    :current-date="content.currentDate"
     :editing="true"
     :text-expr="content.textExpr"
     :description-expr="content.descriptionExpr"
@@ -26,8 +27,6 @@
 </template>
 
 <script>
-import { ref } from "vue";
-
 import "./dx.fluent.dx-light-theme.css";
 import { devextremeSkLocales } from "./devextreme-locales.js";
 

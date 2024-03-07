@@ -70,6 +70,14 @@ export default {
       defaultValue: "week",
       section: "settings",
     },
+    currentDate: {
+      label: {
+        en: "Current Date",
+      },
+      type: "Date",
+      defaultValue: new Date(),
+      section: "settings",
+    },
     draggingGroupName: {
       label: {
         en: "Dragging Group Name",
