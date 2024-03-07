@@ -101,7 +101,8 @@ export default {
       console.log(el);
       console.log(el.instance);
       console.log(el.component);
-      if (el) el.instance.scrollTo(this.currentDate);
+      // if (el) el.instance.scrollTo(this.currentDate);
+      if (el) el.instance.currentDate = new Date();
     },
   },
   data() {
