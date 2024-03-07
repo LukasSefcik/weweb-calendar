@@ -6,7 +6,7 @@
     :data-source="content.dataSource"
     :views="views"
     :current-view="content.currentView"
-    :current-date="currentDate"
+    :current-date="content.currentDate"
     :editing="true"
     :text-expr="content.textExpr"
     :description-expr="content.descriptionExpr"
@@ -102,7 +102,10 @@ export default {
       console.log(el.instance);
       console.log(el.component);
       // if (el) el.instance.scrollTo(this.currentDate);
-      if (el) el.instance.currentDate = new Date();
+      if (el) {
+        el.instance.currentDate = new Date();
+        el.instance.scrollTo(this.currentDate);
+      }
     },
   },
   data() {
