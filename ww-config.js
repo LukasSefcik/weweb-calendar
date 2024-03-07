@@ -76,6 +76,7 @@ export default {
       },
       type: "Text",
       defaultValue: null,
+      bindable: true,
       section: "settings",
     },
     draggingGroupName: {
