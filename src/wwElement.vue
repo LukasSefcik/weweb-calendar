@@ -24,7 +24,7 @@
     />
     <DxResource
       :data-source="content.evidenceNumbers"
-      field-expr="content:textEpr"
+      field-expr="content.textEpr"
       label="Špz"
     />
   </DxScheduler>
