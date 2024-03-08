@@ -94,18 +94,13 @@ export default {
       });
     },
     onContentReady(e) {
+      e.component.getWorkSpaceScrollable().option("useNative", true);
       e.component.scrollTo(this.currentDate);
     },
     scrollToToday() {
       const el = this.$refs.scheduler;
-      console.log(el);
-      console.log(el.instance);
-      console.log(el.component);
-      // if (el) el.instance.scrollTo(this.currentDate);
       if (el) {
         el.instance.option("currentDate", new Date());
-        //el.instance.currentDate = new Date();
-        //el.instance.scrollTo(this.currentDate);
       }
     },
   },
