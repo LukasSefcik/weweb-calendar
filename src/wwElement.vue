@@ -6,7 +6,6 @@
     :data-source="content.dataSource"
     :views="views"
     :current-view="content.currentView"
-    :current-date="content.currentDate"
     :editing="true"
     :text-expr="content.textExpr"
     :description-expr="content.descriptionExpr"
@@ -22,6 +21,11 @@
       :on-add="onAppointmentAdd"
       :on-remove="onAppointmentRemove"
       :on-drag-start="onDragStart"
+    />
+    <DxResource
+      :data-source="content.evidenceNumbers"
+      field-expr="content:textEpr"
+      label="Špz"
     />
   </DxScheduler>
 </template>
@@ -41,10 +45,6 @@ export default {
   created() {
     loadMessages(devextremeSkLocales);
     locale("sk-SK");
-  },
-  setup(props) {
-    currentDate = props.content.currentDate ?? new Date();
-    return currentDate;
   },
   props: {
     content: { type: Object, required: true },
@@ -95,7 +95,7 @@ export default {
     },
     onContentReady(e) {
       e.component.getWorkSpaceScrollable().option("useNative", true);
-      e.component.scrollTo(this.currentDate);
+      e.component.scrollTo(new Date());
     },
     scrollToToday() {
       const el = this.$refs.scheduler;
@@ -107,7 +107,6 @@ export default {
   data() {
     return {
       views: ["agenda", "day", "workWeek", "week", "month"],
-      currentDate: new Date(),
     };
   },
 };

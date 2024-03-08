@@ -53,6 +53,18 @@ export default {
       bindable: true,
       section: "settings",
     },
+    evidenceNumbers: {
+      label: {
+        en: "Evidence Numbers",
+      },
+      type: "Info",
+      options: {
+        text: { en: "Bind your data to resources" },
+      },
+      defaultValue: [],
+      bindable: true,
+      section: "settings",
+    },
     currentView: {
       label: {
         en: "Current View",
@@ -68,15 +80,6 @@ export default {
         ],
       },
       defaultValue: "week",
-      section: "settings",
-    },
-    currentDate: {
-      label: {
-        en: "Current Date",
-      },
-      type: "Text",
-      defaultValue: null,
-      bindable: true,
       section: "settings",
     },
     draggingGroupName: {
