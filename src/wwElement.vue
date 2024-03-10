@@ -1,42 +1,42 @@
 <template>
   <DxScheduler
-    ref="scheduler"
-    all-day-panel-mode="hidden"
-    first-day-of-week="1"
-    :data-source="content.dataSource"
-    :views="views"
-    :current-view="content.currentView"
-    :editing="true"
-    :text-expr="content.textExpr"
-    :description-expr="content.descriptionExpr"
-    :start-date-expr="content.startDateExpr"
-    :end-date-expr="content.endDateExpr"
-    :on-content-ready="onContentReady"
-    @appointment-click="onAppointmentClick"
-    @appointment-updated="onAppointmentUpdated"
-    @appointment-deleted="onAppointmentDeleted"
+      ref="scheduler"
+      all-day-panel-mode="hidden"
+      first-day-of-week="1"
+      :data-source="content.dataSource"
+      :views="views"
+      :current-view="content.currentView"
+      :editing="true"
+      :text-expr="content.textExpr"
+      :description-expr="content.descriptionExpr"
+      :start-date-expr="content.startDateExpr"
+      :end-date-expr="content.endDateExpr"
+      :on-content-ready="onContentReady"
+      @appointment-click="onAppointmentClick"
+      @appointment-updated="onAppointmentUpdated"
+      @appointment-deleted="onAppointmentDeleted"
   >
     <DxAppointmentDragging
-      :group="content.draggingGroupName"
-      :on-add="onAppointmentAdd"
-      :on-remove="onAppointmentRemove"
-      :on-drag-start="onDragStart"
+        :group="content.draggingGroupName"
+        :on-add="onAppointmentAdd"
+        :on-remove="onAppointmentRemove"
+        :on-drag-start="onDragStart"
     />
     <DxResource
-      :data-source="content.evidenceNumbers"
-      :use-color-as-default="true"
-      :field-expr="content.textEpr"
-      label="Špz"
+        :data-source="resources"
+        :use-color-as-default="true"
+        field-expr="resource_id"
+        label="Špz"
     />
   </DxScheduler>
 </template>
 
 <script>
 import "./dx.fluent.dx-light-theme.css";
-import { devextremeSkLocales } from "./devextreme-locales.js";
+import {devextremeSkLocales} from "./devextreme-locales.js";
 
-import { DxScheduler, DxAppointmentDragging, DxResource } from "devextreme-vue/scheduler";
-import { locale, loadMessages } from "devextreme/localization";
+import {DxScheduler, DxAppointmentDragging, DxResource} from "devextreme-vue/scheduler";
+import {locale, loadMessages} from "devextreme/localization";
 
 export default {
   components: {
@@ -49,7 +49,7 @@ export default {
     locale("sk-SK");
   },
   props: {
-    content: { type: Object, required: true },
+    content: {type: Object, required: true},
   },
   emits: ["trigger-event"],
   methods: {
@@ -108,6 +108,17 @@ export default {
   data() {
     return {
       views: ["agenda", "day", "workWeek", "week", "month"],
+      resources: [
+        {
+          id: 1,
+          text: "TN563GH",
+          color: "#ff0000"
+        }, {
+          id: 2,
+          text: "",
+          color: "#00ff00"
+        }
+      ]
     };
   },
 };
