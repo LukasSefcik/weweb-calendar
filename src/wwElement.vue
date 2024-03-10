@@ -26,7 +26,7 @@
       :data-source="content.evidenceNumbers"
       :use-color-as-default="true"
       :field-expr="content.textEpr"
-      :label="Špz"
+      label="Špz"
     />
   </DxScheduler>
 </template>
@@ -35,13 +35,14 @@
 import "./dx.fluent.dx-light-theme.css";
 import { devextremeSkLocales } from "./devextreme-locales.js";
 
-import { DxScheduler, DxAppointmentDragging } from "devextreme-vue/scheduler";
+import { DxScheduler, DxAppointmentDragging, DxResource } from "devextreme-vue/scheduler";
 import { locale, loadMessages } from "devextreme/localization";
 
 export default {
   components: {
     DxScheduler,
     DxAppointmentDragging,
+    DxResource
   },
   created() {
     loadMessages(devextremeSkLocales);
@@ -95,7 +96,6 @@ export default {
       });
     },
     onContentReady(e) {
-      e.component.getWorkSpaceScrollable().option("useNative", true);
       e.component.scrollTo(new Date());
     },
     scrollToToday() {
