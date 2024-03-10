@@ -23,7 +23,7 @@
         :on-drag-start="onDragStart"
     />
     <DxResource
-        :data-source="resources"
+        :data-source="content.evidenceNumbers"
         :use-color-as-default="true"
         :field-expr="content.textExpr"
         label="Špz"
