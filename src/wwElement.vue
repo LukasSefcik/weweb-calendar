@@ -25,8 +25,8 @@
     <DxResource
       :data-source="content.evidenceNumbers"
       :use-color-as-default="true"
-      field-expr="content.textEpr"
-      label="Špz"
+      :field-expr="content.textEpr"
+      :label="Špz"
     />
   </DxScheduler>
 </template>
