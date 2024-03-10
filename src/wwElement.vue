@@ -25,7 +25,7 @@
     <DxResource
         :data-source="resources"
         :use-color-as-default="true"
-        field-expr="resource_id"
+        :field-expr="content.textExpr"
         label="Špz"
     />
   </DxScheduler>
@@ -110,11 +110,11 @@ export default {
       views: ["agenda", "day", "workWeek", "week", "month"],
       resources: [
         {
-          id: 1,
+          id: "TN563GH",
           text: "TN563GH",
           color: "#ff0000"
         }, {
-          id: 2,
+          id: "",
           text: "",
           color: "#00ff00"
         }
