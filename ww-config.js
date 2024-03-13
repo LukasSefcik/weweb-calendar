@@ -80,6 +80,7 @@ export default {
         ],
       },
       defaultValue: "week",
+      bindable: true,
       section: "settings",
     },
     draggingGroupName: {
